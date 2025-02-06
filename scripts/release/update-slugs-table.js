@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * @fileoverview
+ * @file
  * Generates a MarkDown file that lists every brand name and their slug.
  */
 
@@ -28,9 +28,9 @@ update the script at '${path.relative(rootDirectory, __filename)}'.
 
 const icons = await getIconsData();
 for (const icon of icons) {
-  const brandName = icon.title;
-  const brandSlug = getIconSlug(icon);
-  content += `| \`${brandName}\` | \`${brandSlug}\` |\n`;
+	const brandName = icon.title;
+	const brandSlug = getIconSlug(icon);
+	content += `| \`${brandName}\` | \`${brandSlug}\` |\n`;
 }
 
 await fs.writeFile(slugsFile, content);
